@@ -6,16 +6,30 @@
 //
 
 import UIKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Инициализация Firebase
+        FirebaseApp.configure()
+
+        // Создаем окно приложения
+        let navigationController = UINavigationController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let viewController = ViewController()
+
+        navigationController.viewControllers = [viewController]
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
         return true
     }
+}
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -32,5 +46,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
 
