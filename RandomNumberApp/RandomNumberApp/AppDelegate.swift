@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Создаем окно приложения
         let navigationController = UINavigationController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = LoginViewController()
+        let viewController = LoginController()
 
         navigationController.viewControllers = [viewController]
         window?.rootViewController = navigationController
