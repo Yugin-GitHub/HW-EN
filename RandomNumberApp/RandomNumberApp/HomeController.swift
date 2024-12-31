@@ -28,7 +28,6 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "Random Generator"
         navigationItem.rightBarButtonItem = homeView.historyButton
         
         homeView.generateButton.addTarget(self, action: #selector(handleGenerate), for: .touchUpInside)
